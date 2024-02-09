@@ -1,65 +1,38 @@
 <!DOCTYPE html>
-
-<html lang="en">
-
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Felipe Sandoval Sibada</title>
-    <link rel="icon" type="image/ico" href="content/favicon/favicon.ico" sizes="32x32" />
-
-    <!-- Include style sheets -->
-    <link rel="stylesheet" href="content/css/main.css" />
-
-    <!-- Fonts from Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet" />
-
-    <!-- Load FontAwesome (for icons) -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-    />
-  </head>
-
-  <body>
-    <section id="content">
-      <!-- Avatar image -->
-      <img src="content/img/felipesandoval.jpg" alt="Felipe Sandoval picture" class="avatar" />
-
-      <!-- Text -->
-      <h1>👋 Hi there, I'm Felipe Sandoval!</h1>
-      <p>I'm an multimedia engineer currently living in Madrid, Spain.
-      </p>
-      <p>
-        I'm passionate for coding, cutting-edge video technologies, IA, and the world of computers automation.
-      </p>
-      <p>
-        Feel free to contact me to discuss projects or just to grab a cup of coffee!😎
-      </p>
-
-      <!-- Icons -->
-      <ul class="icons">
-        <li>
-          <a href="mailto:felipesandoval1111@gmail.com?Subject=Hi%20Felipe%20I'm%20..." title="Felipe's E-Mail"><i class="fas fa-envelope"></i></a>
-        </li>
-        <li>
-          <a href="https://github.com/felipsandoval" title="Felipe's GitHub"><i class="fab fa-github"></i></a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/felipesandovalsibada/" title="Felipe's LinkedIn"><i class="fab fa-linkedin"></i></a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/felipsandoval/" title="Felipe's Instagram"><i class="fab fa-instagram"></i></a>
-        </li>
-        <li>
-          <a href="https://www.twitter.com/felipetuitea/" title="Felipe's Twitter"><i class="fab fa-twitter"></i></a>
-        </li>
-      </ul>
-    </section>
-  </body>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+       body {
+           margin: 0;
+           padding: 0;
+           height: 100vh;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           background-color: #f0f0f0; /* Color de fondo opcional */
+       }
+       button {
+           padding: 15px 30px;
+           font-size: 16px;
+           cursor: pointer;
+       }
+</style>
+<title>Descargar Documento</title>
+</head>
+<body>
+<button id="descargarBtn">Descargar Documento</button>
+<script>
+       function descargarDocumento() {
+           var blob = new Blob(["Hola, mundo!"], { type: "text/plain" });
+           var a = document.createElement("a");
+           a.href = URL.createObjectURL(blob);
+           a.download = "documento.txt";
+           a.click();
+       }
+       // Asociar la función al clic del botón
+       document.getElementById("descargarBtn").addEventListener("click", descargarDocumento);
+</script>
+</body>
 </html>
